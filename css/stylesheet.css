@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300&display=swap');
+
+@font-face {
+    font-family: 'Gilroy-ExtraBold';
+    src: local('Gilroy Extra Bold'), local('Gilroy-Extra-Bold'),
+    url('../fonts/Gilroy-ExtraBold/font.woff2') format('woff2'),
+    url('../fonts/Gilroy-ExtraBold/font.woff') format('woff');
+}
+
+html,body {
+    min-width: 50%;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: Gilroy-ExtraBold;
+}
+
+p, li {
+    font-family: 'Jura', sans-serif;
+}
+
+#p-current-position {
+    font-weight: bold;
+}
+
+a {
+    color: lightpink;
+}
+
+a:hover {
+    color: #FFFFFF;
+}
+
+h3 a {
+    color: rgba(229, 74, 114, 1.0);
+}
+
+h3 a:hover {
+    color: red;
+}
+
+header {
+    background-image: url("../img/bg_banner_lighter.png");
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+header h1 {
+    padding: 100px 50px 50px 50px;
+    font-size: 4em;
+    text-align: left;
+}
+
+.bg-pink {
+    background-color: rgba(229, 74, 114, 1.0);
+}
+
+.text-pink {
+    color: rgba(229, 74, 114, 1.0);
+}
+
+.bg-pink-darker {
+    background-color: rgba(229, 74, 114, 0.9);
+}
+
+.col-pad-left-50 {
+    padding-left: 0;
+}
+
+.col-pad-right-50 {
+    padding-left: 0;
+}
+
+.col-pad-x-100 {
+    padding: 0 100px;
+}
+
+.img-sizes {
+    min-height: 182px;
+    min-width: 250px;
+    max-height: 182px;
+}
+
+@media (min-width: 576px) {
+    .col-pad-left-50 {
+        padding-left: 50%;
+    }
+
+    .col-pad-right-50 {
+        padding-right: 50%;
+    }
+}
+
+/*Bootstrap overrides*/
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: rgba(229, 74, 114, 1.0) !important;
+    color: #FFFFFF;
+    border-color: rgba(229, 74, 114, 1.0);
+}
+
+.navbar-custom {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: rgba(229, 74, 114, 1.0);
+}
+
+/* Change the color in the stroke property of the image data */
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
