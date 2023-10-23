@@ -120,3 +120,7 @@ header h1 {
 #other-projects a {
     color: white;
 }
+
+.text-bold {
+    font-weight: bold;
+}
