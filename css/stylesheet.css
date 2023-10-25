@@ -48,6 +48,7 @@ header {
     background-size: cover;
     background-position: right;
     background-repeat: no-repeat;
+    background-color: #FFFFFF;
 }
 
 header h1 {
@@ -123,4 +124,8 @@ header h1 {
 
 .text-bold {
     font-weight: bold;
+}
+
+.back-coloumn-pink {
+    background-color: #FCBCCD;
 }
