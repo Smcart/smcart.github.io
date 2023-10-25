@@ -221,3 +221,7 @@ h3 a {
   .video-player::-webkit-media-controls {
     height: 100%;
   }
+
+  .underline-text {
+    text-decoration: underline;
+  }
