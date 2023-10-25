@@ -213,3 +213,11 @@ footer {
 h3 a {
     color: pink;
 }
+
+.video-player {
+    height: auto;
+  }
+  
+  .video-player::-webkit-media-controls {
+    height: 100%;
+  }
