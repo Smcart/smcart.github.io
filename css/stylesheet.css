@@ -26,10 +26,10 @@ p, li {
 #p-current-position {
     font-weight: bold;
 }
-
+/* 
 ul li a, ul li a:hover {
     color: pink;
-}
+} */
 
 a {
     color: lightgreen;
