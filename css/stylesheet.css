@@ -27,12 +27,12 @@ p, li {
     font-weight: bold;
 }
 
-a {
-    color: lightgreen;
-}
-
 ul li a, ul li a:hover {
     color: pink;
+}
+
+a {
+    color: lightgreen;
 }
 
 a:hover {
