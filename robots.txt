@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Block access to private or unnecessary directories (uncomment if needed)
+# Disallow: /private/
+# Disallow: /tmp/
+# Disallow: /cgi-bin/
+
+# Prevent indexing of development or backup files
+Disallow: /*.git$
+Disallow: /*.zip$
+Disallow: /*.tar$
+Disallow: /*.bak$
+Disallow: /*.swp$
+
+# Sitemap location
+Sitemap:
