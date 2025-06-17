@@ -23,7 +23,7 @@ p, li {
     font-family: 'Jura', sans-serif;
 }
 
-#p-current-position {
+.p-current-position {
     font-weight: bold;
 }
 /* 
