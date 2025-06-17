@@ -214,3 +214,7 @@ footer {
 .underline-text {
     text-decoration: underline;
 }
+
+#sam-picture {
+    padding: 3% 10% 10% 10%;
+}
