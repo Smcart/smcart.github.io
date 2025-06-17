@@ -153,6 +153,7 @@ footer {
 }
 
 .rounded {
+    object-fit: cover;
     border-radius: 50%;
 }
 
