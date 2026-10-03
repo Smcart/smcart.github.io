@@ -14,4 +14,4 @@ Disallow: /*.bak$
 Disallow: /*.swp$
 
 # Sitemap location
-Sitemap:
+Sitemap: https://smcart.github.io/sitemap.xml
