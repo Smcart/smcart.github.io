@@ -470,18 +470,25 @@ p {
 }
 .itch-link {
   display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
   margin-top: 1.5rem;
+  padding: 0.55rem 0.8rem;
+  color: var(--pink-deep);
+  font-weight: 700;
+  text-decoration: none;
 }
 .section-pink .itch-link {
-  padding: 3px;
   background: white;
 }
 .itch-link img {
-  width: 150px;
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
   filter: none;
 }
-.itch-link.large img {
-  width: 180px;
+.itch-link.large {
+  font-size: 1.1rem;
 }
 
 /* Resonate image layout */
