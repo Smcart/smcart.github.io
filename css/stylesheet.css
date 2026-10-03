@@ -12,7 +12,7 @@
 
 :root {
   --pink: #e54a72;
-  --pink-deep: #ce3f64;
+  --pink-deep: #b4234c;
   --pink-pale: #f5b3c4;
   --paper: #fffdfd;
   --ink: #252329;
@@ -80,7 +80,7 @@ p {
 
 .hero {
   min-height: 430px;
-  color: var(--pink);
+  color: var(--pink-deep);
   background:
     linear-gradient(
       90deg,
@@ -95,12 +95,12 @@ p {
   padding: 1.5rem clamp(1.5rem, 5vw, 4.5rem) 0;
 }
 .navbar-custom .navbar-brand {
-  color: var(--pink);
+  color: var(--pink-deep);
   font-family: "Gilroy-ExtraBold", Arial, sans-serif;
   font-size: 1.25rem;
 }
 .navbar-custom .nav-link {
-  color: var(--pink);
+  color: var(--pink-deep);
   font-weight: 700;
   padding: 0.5rem 0.7rem !important;
 }
@@ -129,7 +129,7 @@ p {
 }
 .section-pink {
   color: white;
-  background: var(--pink);
+  background: var(--pink-deep);
 }
 .section-white {
   color: var(--ink);
@@ -143,7 +143,7 @@ p {
   text-transform: uppercase;
 }
 .eyebrow.pink {
-  color: var(--pink);
+  color: var(--pink-deep);
 }
 .section-heading {
   margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
@@ -163,7 +163,7 @@ p {
   font-size: 1.05rem;
 }
 .section-heading.light .section-intro {
-  color: rgba(255, 255, 255, 0.86);
+  color: white;
 }
 .centered {
   text-align: center;
@@ -221,11 +221,10 @@ p {
 }
 .quick-facts > div {
   padding: 1rem 1.1rem;
-  background: var(--pink);
+  background: var(--pink-deep);
 }
 .fact-label {
   display: block;
-  opacity: 0.75;
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.09em;
@@ -249,7 +248,7 @@ p {
 }
 .timeline-date {
   padding-top: 0.1rem;
-  color: var(--pink);
+  color: var(--pink-deep);
   font-weight: 700;
   letter-spacing: 0.04em;
 }
@@ -319,7 +318,7 @@ p {
   align-items: center;
 }
 .approach-copy h2 {
-  color: var(--pink);
+  color: var(--pink-deep);
   max-width: 12ch;
   margin-bottom: 1.5rem;
 }
@@ -403,7 +402,7 @@ p {
   top: 50%;
   transform: translate(-50%, -50%);
   padding: 0.75rem 1rem;
-  background: var(--pink);
+  background: var(--pink-deep);
   color: white;
   font-weight: 800;
   white-space: nowrap;
@@ -428,6 +427,10 @@ p {
 .itch-link {
   display: inline-flex;
   margin-top: 1.5rem;
+}
+.section-pink .itch-link {
+  padding: 3px;
+  background: white;
 }
 .itch-link img {
   width: 150px;
@@ -492,10 +495,10 @@ p {
 }
 .project-copy h3 {
   margin-bottom: 1rem;
-  color: var(--pink);
+  color: var(--pink-deep);
 }
 .project-copy a {
-  color: var(--pink);
+  color: var(--pink-deep);
   text-decoration: none;
 }
 .project-copy p {
