@@ -588,7 +588,8 @@ p {
   background: #27252b;
   border-top: 10px solid var(--pink);
 }
-.footer h5 {
+.footer h2 {
+  margin-bottom: 1.67em;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-size: 0.9rem;
