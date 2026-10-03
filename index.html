@@ -15,35 +15,6 @@
       content="game developer, portfolio, Sam McArthur-McLean, game design, programming, Unity, Godot"
     />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
-    <link
-      rel="preconnect"
-      href="https://stackpath.bootstrapcdn.com"
-      crossorigin
-    />
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-    <link rel="dns-prefetch" href="https://kit.fontawesome.com" />
-
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-      rel="stylesheet"
-      media="print"
-      onload="this.media = 'all'"
-    />
-    <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-      rel="stylesheet"
-      media="print"
-      onload="this.media = 'all'"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
-      rel="stylesheet"
-      media="print"
-      onload="this.media = 'all'"
-    />
     <link
       rel="stylesheet"
       href="./css/baguetteBox.min.css"
@@ -57,42 +28,46 @@
     <div class="page-wrap" id="top">
       <main class="site-shell">
         <header class="hero">
-          <nav class="navbar navbar-expand-sm navbar-custom">
-            <a class="navbar-brand" href="#top">Sam McArthur-McLean</a>
+          <nav class="site-nav" aria-label="Main navigation">
+            <a class="site-nav-brand" href="#top">Sam McArthur-McLean</a>
             <button
-              class="navbar-toggler custom-toggler"
+              class="menu-toggle"
               type="button"
-              data-toggle="collapse"
-              data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
+              aria-controls="primary-navigation"
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <span class="navbar-toggler-icon"></span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3 6h18M3 12h18M3 18h18" />
+              </svg>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ml-auto align-items-sm-center">
-                <li class="nav-item">
-                  <a class="nav-link" href="#work">Work</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#projects">Projects</a>
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    href="https://bsky.app/profile/smcarthurmclean.bsky.social"
-                    aria-label="Bluesky"
-                    ><i class="fa-brands fa-bluesky"></i
-                  ></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#footer" aria-label="Email"
-                    ><i class="bi bi-envelope-fill"></i
-                  ></a>
-                </li>
-              </ul>
-            </div>
+            <ul class="nav-list" id="primary-navigation">
+              <li><a class="nav-link" href="#work">Work</a></li>
+              <li><a class="nav-link" href="#projects">Projects</a></li>
+              <li>
+                <a
+                  class="nav-link social-link"
+                  href="https://bsky.app/profile/smcarthurmclean.bsky.social"
+                  aria-label="Bluesky"
+                  ><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M6.033 6.04c1.34 1.004 2.785 3.02 3.318 4.13.532-1.11 1.978-3.126 3.318-4.13 1.054-.79 2.732-1.387 2.732 1.39 0 .9-.52 7.56-2.462 8.103-1.787.496-3.225-1.558-3.74-2.99-.17-.48-.245-.694-.245-.694s-.075.214-.245.694c-.514 1.432-1.952 3.486-3.74 2.99C4.86 15.99 4.34 8.33 4.34 7.43c0-2.778 1.678-2.18 2.733-1.39Z"
+                      fill="currentColor"
+                    />
+                  </svg><span class="nav-label">Bluesky</span></a>
+              </li>
+              <li>
+                <a class="nav-link social-link" href="#footer" aria-label="Email">
+                  <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M3 6.75A2.75 2.75 0 0 1 5.75 4h12.5A2.75 2.75 0 0 1 21 6.75v10.5A2.75 2.75 0 0 1 18.25 20H5.75A2.75 2.75 0 0 1 3 17.25V6.75Zm2.25-.75a1.25 1.25 0 0 0-1.25 1.25v.35l7.5 5.08 7.5-5.08v-.35A1.25 1.25 0 0 0 18.25 6H5.75Zm13.5 3.37-6.36 4.31a1 1 0 0 1-1.18 0L4.75 9.12v8.13c0 .69.56 1.25 1.25 1.25h12.5c.69 0 1.25-.56 1.25-1.25V9.12Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <span class="nav-label">Email</span>
+                </a>
+              </li>
+            </ul>
           </nav>
           <div class="hero-copy">
             <p class="hero-kicker">Game Designer · UK / Cambodia</p>
@@ -633,7 +608,14 @@
             <h5>About</h5>
             <p>
               © <span id="year"></span> Copyright: Sam Mcarthur-McLean.<br />Made
-              with <i class="bi bi-heart-fill"></i> by
+              with
+              <svg class="footer-heart" viewBox="0 0 16 16" aria-hidden="true">
+            <path
+              d="M8 14.1 6.7 12.88C3.42 9.81 1.25 7.88 1.25 5.4A3.1 3.1 0 0 1 4.35 2.3c1.1 0 2.15.52 2.8 1.35a3.8 3.8 0 0 1 2.8-1.35 3.1 3.1 0 0 1 3.1 3.1c0 2.48-2.17 4.41-5.45 7.48L8 14.1Z"
+              fill="currentColor"
+            />
+              </svg>
+              by
               <a href="https://github.com/yerbestpal">Alina McLean.</a>
             </p>
           </div>
@@ -655,15 +637,23 @@
       </main>
     </div>
 
-    <script
-      defer
-      src="https://kit.fontawesome.com/a91ed167c8.js"
-      crossorigin="anonymous"
-    ></script>
     <script defer src="./js/baguetteBox.min.js"></script>
     <script defer src="./js/setDate.js"></script>
     <script>
       window.addEventListener("DOMContentLoaded", function () {
+        var menuToggle = document.querySelector(".menu-toggle");
+        var navigation = document.getElementById("primary-navigation");
+        menuToggle.addEventListener("click", function () {
+          var expanded = menuToggle.getAttribute("aria-expanded") === "true";
+          menuToggle.setAttribute("aria-expanded", String(!expanded));
+          navigation.classList.toggle("is-open", !expanded);
+        });
+        navigation.addEventListener("click", function (event) {
+          if (event.target.closest("a")) {
+            menuToggle.setAttribute("aria-expanded", "false");
+            navigation.classList.remove("is-open");
+          }
+        });
         if (window.location.protocol === "file:") {
           document
             .querySelectorAll('.video-frame iframe[src*="youtube.com/embed/"]')
