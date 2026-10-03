@@ -425,31 +425,54 @@ p {
   width: 100%;
   height: 100%;
 }
-.youtube-local-fallback {
+.youtube-placeholder {
   position: absolute;
   inset: 0;
-  display: block;
-  overflow: hidden;
-  background: #111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background:
+    radial-gradient(circle at 50% 46%, rgba(229, 74, 114, 0.18), transparent 44%),
+    #27252b;
   color: white;
   text-decoration: none;
 }
-.youtube-local-fallback img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.78;
-}
-.youtube-local-fallback span {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  padding: 0.75rem 1rem;
-  background: var(--pink-deep);
+.youtube-placeholder:hover {
   color: white;
-  font-weight: 800;
-  white-space: nowrap;
+  background:
+    radial-gradient(circle at 50% 46%, rgba(229, 74, 114, 0.3), transparent 48%),
+    #27252b;
+}
+.youtube-play {
+  display: grid;
+  width: 3.5rem;
+  height: 3.5rem;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--pink-deep);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+}
+.youtube-play::after {
+  width: 0;
+  height: 0;
+  margin-left: 0.25rem;
+  border-top: 0.55rem solid transparent;
+  border-bottom: 0.55rem solid transparent;
+  border-left: 0.8rem solid white;
+  content: "";
+}
+.youtube-placeholder-title {
+  font-family: "Gilroy-ExtraBold", Arial, sans-serif;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  text-align: center;
+}
+.youtube-placeholder-action {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.85rem;
+  text-align: center;
 }
 
 /* Cyber Sphere */

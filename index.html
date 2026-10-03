@@ -397,23 +397,20 @@
             <h2>Game Designer Showreel</h2>
           </div>
           <div class="video-frame">
-            <iframe
-              src="https://www.youtube.com/embed/iDlEp28jiTA"
-              title="Game Designer Showreel - Samuel McArthur-McLean"
-              frameborder="0"
-              loading="lazy"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allow="
-                accelerometer;
-                autoplay;
-                clipboard-write;
-                encrypted-media;
-                gyroscope;
-                picture-in-picture;
-                web-share;
-              "
-              allowfullscreen
-            ></iframe>
+            <a
+              class="youtube-placeholder"
+              href="https://www.youtube.com/watch?v=iDlEp28jiTA"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-video-id="iDlEp28jiTA"
+              data-video-title="Game Designer Showreel - Samuel McArthur-McLean"
+            >
+              <span class="youtube-play" aria-hidden="true"></span>
+              <span class="youtube-placeholder-title">Game Designer Showreel</span>
+              <span class="youtube-placeholder-action"
+                >Load video from YouTube</span
+              >
+            </a>
           </div>
         </section>
 
@@ -443,23 +440,20 @@
                 <span>Games on itch.io</span></a>
             </div>
             <div class="video-frame compact-video">
-              <iframe
-                src="https://www.youtube.com/embed/G0hevY-0wGU"
-                title="Cyber Sphere"
-                frameborder="0"
-                loading="lazy"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allow="
-                  accelerometer;
-                  autoplay;
-                  clipboard-write;
-                  encrypted-media;
-                  gyroscope;
-                  picture-in-picture;
-                  web-share;
-                "
-                allowfullscreen
-              ></iframe>
+              <a
+                class="youtube-placeholder"
+                href="https://www.youtube.com/watch?v=G0hevY-0wGU"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-video-id="G0hevY-0wGU"
+                data-video-title="Cyber Sphere"
+              >
+                <span class="youtube-play" aria-hidden="true"></span>
+                <span class="youtube-placeholder-title">Cyber Sphere</span>
+                <span class="youtube-placeholder-action"
+                  >Load video from YouTube</span
+                >
+              </a>
             </div>
           </div>
         </section>
@@ -697,30 +691,27 @@
             poster.srcset = video.dataset.posterSrcset;
             poster.src = "./img/olo_grab_optimized.jpg";
           });
-        if (window.location.protocol === "file:") {
-          document
-            .querySelectorAll('.video-frame iframe[src*="youtube.com/embed/"]')
-            .forEach(function (frame) {
-              var match = frame.src.match(/embed\/([^?&]+)/);
-              if (!match) return;
-              var id = match[1];
-              var title = frame.getAttribute("title") || "Watch on YouTube";
-              var link = document.createElement("a");
-              link.className = "youtube-local-fallback";
-              link.href = "https://www.youtube.com/watch?v=" + id;
-              link.target = "_blank";
-              link.rel = "noopener";
-              var img = document.createElement("img");
-              img.src = "https://i.ytimg.com/vi/" + id + "/hqdefault.jpg";
-              img.alt = title;
-              img.loading = "lazy";
-              var label = document.createElement("span");
-              label.textContent = "Watch on YouTube";
-              link.appendChild(img);
-              link.appendChild(label);
-              frame.replaceWith(link);
+        document
+          .querySelectorAll(".youtube-placeholder[data-video-id]")
+          .forEach(function (placeholder) {
+            placeholder.addEventListener("click", function (event) {
+              if (window.location.protocol === "file:") return;
+              event.preventDefault();
+              var videoId = placeholder.dataset.videoId;
+              var frame = document.createElement("iframe");
+              frame.src =
+                "https://www.youtube-nocookie.com/embed/" +
+                encodeURIComponent(videoId) +
+                "?autoplay=1";
+              frame.title = placeholder.dataset.videoTitle;
+              frame.loading = "lazy";
+              frame.referrerPolicy = "strict-origin-when-cross-origin";
+              frame.allow =
+                "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+              frame.allowFullscreen = true;
+              placeholder.replaceWith(frame);
             });
-        }
+          });
         if (window.baguetteBox) baguetteBox.run(".gallery");
       });
     </script>
